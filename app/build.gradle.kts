@@ -46,9 +46,12 @@ dependencies {
     implementation(libs.camera.lifecycle)
     implementation(libs.camera.video)
     implementation(libs.camera.view)
+    implementation(libs.camera.effects)
     implementation(libs.guava)
     implementation("com.google.mlkit:object-detection:17.0.2")
     implementation("com.google.mlkit:face-detection:16.1.7")
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+    implementation("androidx.exifinterface:exifinterface:1.3.7")
     
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)

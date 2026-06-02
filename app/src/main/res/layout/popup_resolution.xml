@@ -1,50 +1,75 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="@drawable/bg_popup_rounded"
-    android:paddingVertical="8dp">
+    android:padding="20dp">
 
-    <TextView
-        android:id="@+id/tvRes48"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:paddingVertical="12dp"
-        android:text="48mp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:alpha="0.5" />
-
-    <TextView
-        android:id="@+id/tvRes24"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:paddingVertical="12dp"
-        android:text="24mp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:alpha="0.5" />
-
-    <View
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="#33FFFFFF"
-        android:layout_marginHorizontal="16dp" />
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Độ phân giải mặc định"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/btnClosePopup"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="#FF9800" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rgResolution"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/tvRes48"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="48mp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingVertical="12dp"
+            android:buttonTint="#FF9800" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/tvRes24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="24mp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingVertical="12dp"
+            android:buttonTint="#FF9800" />
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/tvRes12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12mp"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:paddingVertical="12dp"
+            android:buttonTint="#FF9800" />
+
+    </RadioGroup>
 
     <TextView
-        android:id="@+id/tvRes12"
-        android:layout_width="120dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="12dp"
-        android:text="12mp"
-        android:textColor="@color/white"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:gravity="center"
-        android:alpha="0.5" />
+        android:layout_marginTop="20dp"
+        android:text="Kích thước file ảnh tỷ lệ thuận với độ phân giải, đồng thời độ phân giải càng cao, ảnh càng chi tiết."
+        android:textColor="#99FFFFFF"
+        android:textSize="12sp" />
+
 </LinearLayout>

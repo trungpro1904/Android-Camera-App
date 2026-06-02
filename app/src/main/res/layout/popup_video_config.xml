@@ -1,101 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="280dp"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:orientation="vertical"
     android:background="@drawable/bg_popup_rounded"
-    android:padding="12dp">
+    android:padding="20dp">
 
-    <!-- Resolutions column -->
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
-
+        android:layout_marginBottom="16dp">
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Định dạng video mặc định"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+        <ImageView
+            android:id="@+id/btnClosePopupVideo"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_alignParentEnd="true"
+            android:src="@android:drawable/ic_menu_close_clear_cancel"
+            app:tint="#FF9800" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/rgQuality"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/tvVideo4K"
-            android:layout_width="60dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="4K"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:alpha="0.5"
-            android:paddingVertical="12dp"/>
+            android:textSize="18sp"
+            android:paddingVertical="10dp"
+            android:buttonTint="#FF9800" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/tvVideoHD"
-            android:layout_width="60dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="HD"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:alpha="0.5"
-            android:paddingVertical="12dp"/>
+            android:textSize="18sp"
+            android:paddingVertical="10dp"
+            android:buttonTint="#FF9800" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/tvVideo720"
-            android:layout_width="60dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="720"
+            android:text="720p"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:alpha="0.5"
-            android:paddingVertical="12dp"/>
-    </LinearLayout>
+            android:textSize="18sp"
+            android:paddingVertical="10dp"
+            android:buttonTint="#FF9800" />
+    </RadioGroup>
 
-    <View
-        android:layout_width="1dp"
-        android:layout_height="match_parent"
-        android:background="#33FFFFFF"
-        android:layout_marginHorizontal="12dp"/>
-
-    <!-- FPS column -->
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <TextView
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+        android:text="Tốc độ khung hình(FPS)"
+        android:textColor="@color/white"
+        android:textSize="14sp" />
 
-        <TextView
+    <RadioGroup
+        android:id="@+id/rgFps"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/tvFps120"
-            android:layout_width="60dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="120"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:alpha="0.5"
-            android:paddingVertical="12dp"/>
+            android:textSize="18sp"
+            android:paddingVertical="10dp"
+            android:buttonTint="#FF9800" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/tvFps60"
-            android:layout_width="60dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="60"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:alpha="0.5"
-            android:paddingVertical="12dp"/>
+            android:textSize="18sp"
+            android:paddingVertical="10dp"
+            android:buttonTint="#FF9800" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatRadioButton
             android:id="@+id/tvFps30"
-            android:layout_width="60dp"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="30"
             android:textColor="@color/white"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:gravity="center"
-            android:alpha="0.5"
-            android:paddingVertical="12dp"/>
-    </LinearLayout>
-</LinearLayout>
+            android:textSize="18sp"
+            android:paddingVertical="10dp"
+            android:buttonTint="#FF9800" />
+    </RadioGroup>
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Độ phân giải video và tốc độ khung hình tỷ lệ thuận với kích thước file video.\n*Lưu ý rằng việc quay video với độ phân giải lớn và FPS cao có thể làm nóng máy."
+        android:textColor="#99FFFFFF"
+        android:textSize="11sp" />
+
+</LinearLayout>

@@ -10,10 +10,10 @@
         android:id="@+id/viewFinder"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/bottomSection"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/topBar" />
 
     <com.example.myapplication.GridOverlayView
         android:id="@+id/gridOverlay"
@@ -43,19 +43,18 @@
         android:elevation="20dp"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Zoom Controls -->
-    <LinearLayout
-        android:id="@+id/layoutZoom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
+    <!-- Zoom Controls (Updated to RecyclerView for swiping) -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvZoom"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
         android:layout_marginBottom="16dp"
         android:elevation="15dp"
+        android:clipToPadding="false"
+        android:paddingHorizontal="180dp"
         app:layout_constraintBottom_toTopOf="@+id/layoutEvSlider"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </LinearLayout>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <!-- EV Slider Panel (Updated to match image) -->
     <LinearLayout
@@ -142,6 +141,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:clipToPadding="false"
+                    android:paddingHorizontal="150dp"
                     android:orientation="horizontal"
                     app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
             </FrameLayout>
