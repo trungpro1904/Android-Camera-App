@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="4dp">
+
+    <FrameLayout
+        android:id="@+id/lutContainer"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:background="@drawable/bg_rounded_square"
+        android:backgroundTint="#80FFFFFF">
+
+        <TextView
+            android:id="@+id/tvLutName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Gốc"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            android:gravity="center"
+            android:maxWidth="50dp"/>
+    </FrameLayout>
+</LinearLayout>
+

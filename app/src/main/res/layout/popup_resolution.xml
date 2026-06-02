@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_popup_rounded"
+    android:paddingVertical="8dp">
+
+    <TextView
+        android:id="@+id/tvRes48"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:text="48mp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:alpha="0.5" />
+
+    <TextView
+        android:id="@+id/tvRes24"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:text="24mp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:alpha="0.5" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#33FFFFFF"
+        android:layout_marginHorizontal="16dp" />
+
+    <TextView
+        android:id="@+id/tvRes12"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:paddingVertical="12dp"
+        android:text="12mp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:alpha="0.5" />
+</LinearLayout>
